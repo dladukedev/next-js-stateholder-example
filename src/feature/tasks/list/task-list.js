@@ -5,7 +5,7 @@ import { useTasksPageSate } from "./task-list-state"
 
 const TaskFilterRow = ({ toggleSortDirection, setSort, sortOptions, toggleShowCompleted, ...htmlProps }) => {
   return (
-    <div {...htmlProps}>
+    <div {...htmlProps} className="grid grid-flow-col justify-start gap-3">
       <button onClick={toggleSortDirection}>TOGGLE DIR</button>
       <button onClick={toggleShowCompleted}>TOGGLE VISIBLE</button>
       <div>
@@ -18,7 +18,7 @@ const TaskFilterRow = ({ toggleSortDirection, setSort, sortOptions, toggleShowCo
 
 const TasksListItem = ({ task, ...htmlProps }) => {
   return (
-    <div {...htmlProps}>
+    <div {...htmlProps} className="grid grid-flow-col justify-start gap-3">
       <span>{task.id}</span>
       <span>{task.title}</span>
       <span>{task.created.toString()}</span>

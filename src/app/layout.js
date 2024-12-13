@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,6 +25,10 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <footer className="grid grid-flow-col justify-start gap-3">
+          <Link href="/tasks">Tasks</Link>
+          <Link href="/about">About</Link>
+        </footer>
       </body>
     </html>
   );
